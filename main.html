@@ -1,10 +1,59 @@
-<html>
-<title>Mel Kirby Rojas</title>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio with Fullscreen Hero & Scroll Animations</title>
 
+  <!-- AOS Animate On Scroll CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-Hi
-</body>
 
+  <main>
+    <!-- Fullscreen Hero -->
+    <section class="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Hello, I'm Mel</h1>
+        <p>Computer Engineer | Network and System Administrator | Data Analyst</p>
+        <a href="#" class="btn" id="scrollToProjects">More</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" data-aos="fade-right">
+      <h2>About Me</h2>
+      <p>I build beautiful, responsive websites and create great user experiences.</p>
+    </section>
+
+    <!-- More -->
+    <section id="projects" class="section" data-aos="fade-up">
+      <h2>Projects</h2>
+      <p>Here are some of my recent works.</p>
+      <!-- Add project cards or items here
+    </section> 
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" data-aos="zoom-in">
+      <h2>Contact</h2>
+      <p>Email: Kirbyrojas1995@gmail.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/mkr06" target="_blank">linkedin.com/in/MKR06</a></p>
+    </section>
+  </main>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Your Custom Script -->
+  <script src="scripts.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
 </html>
