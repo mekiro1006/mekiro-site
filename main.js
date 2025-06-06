@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return
   }
 
+  
   const renderer = new THREE.WebGLRenderer({
     canvas: canvas,
     antialias: true,
