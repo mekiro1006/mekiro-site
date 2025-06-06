@@ -1,11 +1,15 @@
-body,
-html {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
   overflow: hidden;
-  position: relative;
-  background-color: black;
-  font-family: "Arial", sans-serif;
+  background-color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: white;
 }
 
 #bg {
@@ -15,67 +19,197 @@ html {
   z-index: -1;
 }
 
-#MKR {
-  position: absolute;
-  top: 10%;
+/* Navigation */
+.nav {
+  position: fixed;
+  top: 2rem;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.nav-btn:hover {
   color: white;
-  font-size: 3rem;
-  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Main Content */
+.main-content {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
   text-align: center;
   z-index: 10;
+  margin-bottom: 2rem;
+}
+
+.hero-name {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: transform 0.1s ease-out;
+  cursor: default;
 }
 
-#about-me {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.2rem;
+.hero-title {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 300;
-  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Content Sections */
+.content-section {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  pointer-events: none;
   z-index: 10;
-  opacity: 0.9;
-  width: 80%;
-  max-width: 600px;
+}
+
+.content-section.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Cards */
+.about-card,
+.projects-card,
+.contact-card {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.about-card h2,
+.projects-card h2,
+.contact-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.about-card p,
+.projects-card p,
+.contact-card p {
   line-height: 1.6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
 }
 
-#summary {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Projects */
+.project-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.project-item h3 {
   color: white;
-  font-size: 1rem;
-  font-weight: 300;
-  text-align: center;
-  z-index: 10;
-  opacity: 0.8;
-  width: 80%;
-  max-width: 500px;
-  line-height: 1.5;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
-/* Responsive design */
+.project-item p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact-info p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  #MKR {
-    font-size: 2rem;
-    top: 15%;
+  .hero-name {
+    font-size: 2.5rem;
   }
 
-  #about-me {
-    font-size: 1rem;
-    top: 35%;
+  .hero-title {
+    font-size: 1.2rem;
   }
 
-  #summary {
-    font-size: 0.9rem;
-    top: 55%;
+  .content-section {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .about-card,
+  .projects-card,
+  .contact-card {
+    max-width: none;
+    padding: 1.5rem;
+  }
+
+  .nav {
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    transform: none;
   }
 }
