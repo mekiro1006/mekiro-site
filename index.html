@@ -24,15 +24,12 @@
       </section>
     </main>
 
-    <!-- MODERN ES MODULES APPROACH - Future-proof and recommended by Three.js -->
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
-        }
-      }
-    </script>
-    <script type="module" src="main.js"></script>
+    <!-- BULLETPROOF: Using the most reliable CDN approach -->
+    <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
