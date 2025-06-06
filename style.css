@@ -20,92 +20,71 @@ html {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
-  font-size: 3.5rem;
+  color: #ffffff;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  z-index: 10;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  animation: fadeInUp 2s ease-out;
+  z-index: 100; /* Increased z-index */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.3); /* Add subtle background */
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
 #about-me {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.3rem;
+  color: #ffffff;
+  font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
-  z-index: 10;
-  opacity: 0.9;
+  z-index: 100; /* Increased z-index */
+  opacity: 1; /* Full opacity */
   width: 80%;
-  max-width: 700px;
-  line-height: 1.8;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-  animation: fadeInUp 2s ease-out 0.5s both;
+  max-width: 600px;
+  line-height: 1.6;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.2); /* Add subtle background */
+  padding: 15px;
+  border-radius: 10px;
 }
 
 #summary {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-size: 1.1rem;
+  color: #ffffff;
+  font-size: 1rem;
   font-weight: 300;
   text-align: center;
-  z-index: 10;
-  opacity: 0.8;
+  z-index: 100; /* Increased z-index */
+  opacity: 1; /* Full opacity */
   width: 80%;
-  max-width: 600px;
-  line-height: 1.6;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-  animation: fadeInUp 2s ease-out 1s both;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -30%) translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) translateY(0);
-  }
+  max-width: 500px;
+  line-height: 1.5;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.2); /* Add subtle background */
+  padding: 15px;
+  border-radius: 10px;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   #MKR {
-    font-size: 2.5rem;
+    font-size: 2rem;
     top: 15%;
   }
 
   #about-me {
-    font-size: 1.1rem;
+    font-size: 1rem;
     top: 35%;
-    width: 90%;
-  }
-
-  #summary {
-    font-size: 1rem;
-    top: 55%;
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  #MKR {
-    font-size: 2rem;
-  }
-
-  #about-me {
-    font-size: 1rem;
   }
 
   #summary {
     font-size: 0.9rem;
+    top: 55%;
   }
 }
