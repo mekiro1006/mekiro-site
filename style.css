@@ -20,55 +20,71 @@ html {
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  color: #ffffff;
+  color: white;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  z-index: 100; /* Increased z-index */
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-  background: rgba(0, 0, 0, 0.3); /* Add subtle background */
-  padding: 10px 20px;
-  border-radius: 10px;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-name {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.1);
+  transition: transform 0.1s ease-out;
+  cursor: default;
+  background: linear-gradient(45deg, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 #about-me {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: white;
   font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
-  z-index: 100; /* Increased z-index */
-  opacity: 1; /* Full opacity */
+  z-index: 10;
+  opacity: 0.9;
   width: 80%;
   max-width: 600px;
   line-height: 1.6;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-  background: rgba(0, 0, 0, 0.2); /* Add subtle background */
-  padding: 15px;
-  border-radius: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 #summary {
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: white;
   font-size: 1rem;
   font-weight: 300;
   text-align: center;
-  z-index: 100; /* Increased z-index */
-  opacity: 1; /* Full opacity */
+  z-index: 10;
+  opacity: 0.8;
   width: 80%;
   max-width: 500px;
   line-height: 1.5;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-  background: rgba(0, 0, 0, 0.2); /* Add subtle background */
-  padding: 15px;
-  border-radius: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.nav-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.nav-btn.active {
+  color: white;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 /* Responsive design */
