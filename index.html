@@ -10,77 +10,26 @@
   <body>
     <canvas id="bg"></canvas>
     
-    <!-- Navigation -->
-    <nav class="nav">
-      <button class="nav-btn active" data-section="about">About</button>
-      <button class="nav-btn" data-section="projects">Projects</button>
-      <button class="nav-btn" data-section="contact">Contact</button>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Hero Section -->
-      <section class="hero">
-        <h1 class="hero-name" id="heroName">I'm Mel</h1>
-        <p class="hero-title">Computer Engineer</p>
+    <main>
+      <section id="MKR">
+        <p> I'm Mel</p>
       </section>
 
-      <!-- About Section -->
-      <section class="content-section about-section active" id="about">
-        <div class="about-card">
-          <h2>About Me</h2>
-          <p>Computer Engineer with expertise in systems, networking, and data analysis. My passion lies in leveraging technology and data to create impactful solutions for institutional and enterprise-level challenges.</p>
-          <div class="skills">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Three.js</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Data Analysis</span>
-            <span class="skill-tag">Systems</span>
-            <span class="skill-tag">Networking</span>
-          </div>
-        </div>
+      <section id="about-me">
+        <p>I am a Computer Engineer with expertise in systems, networking, and data analysis. My passion lies in leveraging technology and data to create impactful solutions.</p>
       </section>
 
-      <!-- Projects Section -->
-      <section class="content-section projects-section" id="projects">
-        <div class="projects-card">
-          <h2>Projects</h2>
-          <div class="project-item">
-            <h3>3D Portfolio Website</h3>
-            <p>Interactive 3D portfolio built with Three.js and modern web technologies.</p>
-          </div>
-          <div class="project-item">
-            <h3>Data Analysis Platform</h3>
-            <p>Enterprise-level data processing and visualization system.</p>
-          </div>
-          <div class="project-item">
-            <h3>Network Optimization Tool</h3>
-            <p>System for optimizing institutional network performance.</p>
-          </div>
-          <div class="project-item">
-            <h3>Institutional Data Management</h3>
-            <p>Workflow optimization and actionable insights delivery system.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="content-section contact-section" id="contact">
-        <div class="contact-card">
-          <h2>Get In Touch</h2>
-          <p>Let's connect and discuss opportunities to work together.</p>
-          <div class="contact-info">
-            <p>📧 kirbyrojas1995@gmail.com</p>
-            <p>📍 Winnipeg, MB</p>
-            <p>📱 (204) 698-5650</p>
-            <p>💼 <a href="https://www.linkedin.com/in/mkr06" target="_blank" style="color: #4fc3f7; text-decoration: none;">LinkedIn</a></p>
-          </div>
-        </div>
+      <section id="summary">
+        <p>Experienced in managing institutional and enterprise-level data, optimizing workflows, and delivering actionable insights...</p>
       </section>
     </main>
 
-    <!-- Scripts -->
+    <!-- BULLETPROOF: Using the most reliable CDN approach -->
     <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://unpkg.com/three@0.158.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
